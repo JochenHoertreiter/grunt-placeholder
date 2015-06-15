@@ -2,7 +2,7 @@
     "name":        "grunt-placeholder",
     "homepage":    "https://github.com/JochenHoertreiter/grunt-placeholder",
     "description": "Grunt Task for replacing placeholders in source files with values from a configuration file",
-    "version":     "1.0.0",
+    "version":     "1.0.1",
     "license":     "MIT",
     "author": {
         "name":    "Jochen Hoertreiter",
