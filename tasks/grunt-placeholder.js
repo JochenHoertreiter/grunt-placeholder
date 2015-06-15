@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     var ducky = require("ducky");
     var cacheLRU = require("cache-lru");
 
-    grunt.registerMultiTask("grunt-placeholder", "replacing placeholders in source files with values from a configuration file", function () {
+    grunt.registerMultiTask("placeholder", "replacing placeholders in source files with values from a configuration file", function () {
         /*  prepare options  */
         var options = this.options({
             configFile: "component.yaml",
