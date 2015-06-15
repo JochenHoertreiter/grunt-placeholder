@@ -64,23 +64,23 @@ Task targets, files and options may be specified according to the Grunt
 Assuming we have the following folder and file structure that helps us to separate concerns of individual parts of a component:
 
 - `app`
--- `ui`
---- `componentA`
----- `de.json`
----- `en.json`
----- `componentA-ctrl.js`
----- `componentA-model.js`
----- `componentA-view.js`
----- `componentA.html`
----- `componentA.less`
---- `componentB`
----- `de.json`
----- `en.json`
----- `componentB-ctrl.js`
----- `componentB-model.js`
----- `componentB-view.js`
----- `componentB.html`
----- `componentB.less`
+  - `ui`
+    - `componentA`
+      - `de.json`
+      - `en.json`
+      - `componentA-ctrl.js`
+      - `componentA-model.js`
+      - `componentA-view.js`
+      - `componentA.html`
+      - `componentA.less`
+    - `componentB`
+      - `de.json`
+      - `en.json`
+      - `componentB-ctrl.js`
+      - `componentB-model.js`
+      - `componentB-view.js`
+      - `componentB.html`
+      - `componentB.less`
 
 The example separates an ui component into several files in order to put
 - internationalisation into `json` files
