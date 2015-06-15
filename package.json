@@ -2,7 +2,7 @@
     "name":        "grunt-placeholder",
     "homepage":    "https://github.com/JochenHoertreiter/grunt-placeholder",
     "description": "Grunt Task for replacing placeholders in source files with values from a configuration file",
-    "version":     "1.0.1",
+    "version":     "1.0.2",
     "license":     "MIT",
     "author": {
         "name":    "Jochen Hoertreiter",
@@ -29,15 +29,15 @@
         "grunt":                "~0.4.5",
         "grunt-cli":            "~0.1.13",
         "grunt-contrib-jshint": "~0.11.2",
-        "grunt-contrib-clean":  "~0.6.0",
-        "ducky":                "~2.1.3",
-        "cache-lru":            "~1.0.6"
+        "grunt-contrib-clean":  "~0.6.0"
     },
     "peerDependencies": {
         "grunt":                "~0.4.5"
     },
     "dependencies": {
-        "chalk":                "~1.0.0"
+        "chalk":                "~1.0.0",
+        "ducky":                "~2.1.3",
+        "cache-lru":            "~1.0.6"
     },
     "engines": {
         "node":                 ">=0.10.0"
