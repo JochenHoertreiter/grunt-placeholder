@@ -35,9 +35,6 @@ grunt.loadNpmTasks('grunt-placeholder');
 ## Task Options
 
 TODO:
-- `replacer`: (default `null`) the replacer argument for `JSON.stringify()` (second argument).
-- `space`: (default `\t`) the space argument for `JSON.stringify()` (third argument).
-
 - `configFile`: (default `component.yaml`) the configuration file that contains key/values for any replacements.
 - `configType`: (default `yaml`) the type of the configuration file - possible values are `json` or `yaml`.
 - `configEncoding`: (default `utf8`) file encoding for configuration files.
