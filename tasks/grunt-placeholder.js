@@ -51,6 +51,7 @@ module.exports = function (grunt) {
                     var configFile = path.join(f.cwd ? f.cwd : "", path.dirname(src), options.configFile);
                     var dest = path.join(f.dest, src);
                     var copyOptions = {};
+                    var replacementCount = 0;
 
                     if (grunt.file.exists(configFile)) {
                         /* copy and replace */
@@ -61,7 +62,6 @@ module.exports = function (grunt) {
                             cache.set(configFile, config);
                         }
 
-                        var replacementCount = 0;
                         copyOptions.encoding = options.sourceEncoding;
                         copyOptions.process = function (content) {
                             content = content.replace(options.placeholderRegex, function (m0, m1) {
@@ -76,9 +76,13 @@ module.exports = function (grunt) {
                             });
                             return content;
                         };
+                    }
+
+                    grunt.file.copy(path.join(f.cwd ? f.cwd : "", src), dest, copyOptions);
+
+                    if (grunt.file.exists(configFile)) {
                         grunt.log.writeln("File \"" + chalk.green(src) + "\" substituted " + replacementCount + " times.");
                     }
-                    grunt.file.copy(path.join(f.cwd ? f.cwd : "", src), dest, copyOptions);
                 });
             }
             catch (e) {
