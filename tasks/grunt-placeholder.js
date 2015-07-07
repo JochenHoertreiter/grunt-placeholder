@@ -61,6 +61,7 @@ module.exports = function (grunt) {
                             cache.set(configFile, config);
                         }
 
+                        var replacementCount = 0;
                         copyOptions.encoding = options.sourceEncoding;
                         copyOptions.process = function (content) {
                             content = content.replace(options.placeholderRegex, function (m0, m1) {
@@ -70,11 +71,12 @@ module.exports = function (grunt) {
                                 /* find the value in the config file and return it as replacement for the key */
                                 var replacement = ducky.select(config, m1);
                                 grunt.log.debug("replacing \"" + m0 + "\" with \"" + replacement + "\"");
+                                replacementCount++;
                                 return replacement;
                             });
                             return content;
                         };
-                        grunt.log.writeln("File \"" + chalk.green(src) + "\" substituted.");
+                        grunt.log.writeln("File \"" + chalk.green(src) + "\" substituted " + replacementCount + " times.");
                     }
                     grunt.file.copy(path.join(f.cwd ? f.cwd : "", src), dest, copyOptions);
                 });
